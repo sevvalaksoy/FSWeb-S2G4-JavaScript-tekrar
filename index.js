@@ -146,16 +146,19 @@ console.log(siralisayilar);
 
 tekraredensayilar = [];
 const repeation = {};
-sayilar.forEach((sayi) => {
-  if (repeation[sayi]){
+
+for (let sayi of sayilar) {
+  if (repeation[sayi]) {
     repeation[sayi]++;
   } else {
     repeation[sayi] = 1;
+    }
+  }
+sayilar.forEach((sayi)=> {
+  if(repeation[sayi] > 1){
+    tekraredensayilar.push(`${sayi} sayısı ${repeation[sayi]} kere tekrar edilmiştir`);
   }
 })
-for (let i = 0; i < repeation.length; i++){
-  tekraredensayilar.push(`${i} sayısı ${repeation[i]} kere tekrar edilmiştir`);
-}
 console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
